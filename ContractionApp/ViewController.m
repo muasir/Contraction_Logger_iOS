@@ -74,8 +74,17 @@ bool clearRow = false;
     }else{
         //It's the history section.
         HistoryDataCell *hCell = [tableView dequeueReusableCellWithIdentifier:historyIdentifier];
+        // use your own custom menu view
+        /*
+        UIView *menuView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 160.0, 44.0)];
+        menuView.backgroundColor = [UIColor redColor];
+        
+        hCell.rightMenuView = menuView;
+        hCell.textLabel.text = @"Delete";
+        */
+        
         [hCell populateCellWithHistoryData:[historyData objectAtIndex:indexPath.row] ];
-        cell = hCell;
+        return hCell;
     }
 
     return cell;
