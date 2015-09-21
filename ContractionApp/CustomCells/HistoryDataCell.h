@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ABMenuTableViewCell.h"
 #import "HistoryData.h"
 
-@interface HistoryDataCell : UITableViewCell
+@interface HistoryDataCell : ABMenuTableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *startTime;
 @property (weak, nonatomic) IBOutlet UILabel *endTime;
 @property (weak, nonatomic) IBOutlet UILabel *duration;
