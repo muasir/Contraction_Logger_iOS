@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ViewController : UIViewController
+#import "StopClockCell.h"
+@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, StopClockDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+- (IBAction)deleteHistory:(id)sender;
 
 
 @end
